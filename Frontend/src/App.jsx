@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navbar from './Components/navbar/navbar.jsx'
+import Navbar from './Components/Navbar/Navbar.jsx'
 import Footer from './Components/footer/Footer.jsx'
 import Hero from './Components/Hero/Hero.jsx'
 
