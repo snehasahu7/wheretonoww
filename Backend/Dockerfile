@@ -2,7 +2,7 @@ FROM node:18
 
 # Install Python and Chrome dependencies
 RUN apt-get update && apt-get install -y \
-    python3 python3-pip \
+    python3 python3-venv python3-pip \
     chromium \
     chromium-driver \
     wget unzip xvfb \
@@ -12,9 +12,14 @@ RUN apt-get update && apt-get install -y \
 ENV CHROME_BIN=/usr/bin/chromium
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
-# Install Python requirements
+# Create and activate virtual environment, then install Python packages inside it
 COPY requirements.txt .
-RUN pip3 install -r requirements.txt
+RUN python3 -m venv /opt/venv \
+    && /opt/venv/bin/pip install --upgrade pip \
+    && /opt/venv/bin/pip install -r requirements.txt
+
+# Set PATH so python and pip inside venv are default
+ENV PATH="/opt/venv/bin:$PATH"
 
 # App source
 WORKDIR /app
