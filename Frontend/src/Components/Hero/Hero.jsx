@@ -59,7 +59,7 @@ const Hero = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/api/eventlist", {
+                const response = await axios.get("wheretonoww-production.up.railway.app/api/eventlist", {
                     withCredentials: true
                 });
                 
@@ -99,7 +99,7 @@ const Hero = () => {
     // Add function to test session
     const testSession = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/test-session', {
+            const response = await axios.get('wheretonoww-production.up.railway.app/api/test-session', {
                 withCredentials: true
             });
             console.log('Session test response:', response.data);
@@ -140,7 +140,7 @@ const Hero = () => {
             sessionStorage.setItem('lastSubmittedEmail', email);
 
             // Send email and event URL to backend
-            const response = await axios.post('http://localhost:4000/api/storemail', 
+            const response = await axios.post('wheretonoww-production.up.railway.app/api/storemail', 
                 {
                     email,
                     eventurl: selectedEventUrl
@@ -157,7 +157,7 @@ const Hero = () => {
 
             if (response.data.success) {
                 // Verify the data was stored
-                const verifyResponse = await axios.get('http://localhost:4000/api/stored-emails', {
+                const verifyResponse = await axios.get('wheretonoww-production.up.railway.app/api/stored-emails', {
                     withCredentials: true
                 });
                 console.log('Stored emails verification:', verifyResponse.data);
@@ -181,7 +181,7 @@ const Hero = () => {
     // Add function to check stored emails
     const checkStoredEmails = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/stored-emails', {
+            const response = await axios.get('wheretonoww-production.up.railway.app/api/stored-emails', {
                 withCredentials: true
             });
             console.log('Stored emails:', response.data);
