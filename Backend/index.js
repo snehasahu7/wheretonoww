@@ -16,7 +16,7 @@ const app = express();
 const port = 4000;
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://wheretonoww.netlify.app',
     credentials: true,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
