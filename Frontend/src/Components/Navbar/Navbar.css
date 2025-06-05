@@ -1,0 +1,22 @@
+.navbar-container{
+    height: 100px;
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    
+    background:linear-gradient(135deg, #555da9 0%, #1f276a 100%);
+    
+}
+.title{
+    padding-top:25px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    padding-left: 40px;
+}
+.icon{
+    padding-top:25px;
+    color: #fff;
+    font-size: 25px;
+    
+}

@@ -1,0 +1,19 @@
+.footerr{
+    margin-top: 100px;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+}
+.footer-container{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(135deg, #555da9 0%, #1f276a 100%);
+}
+.footer-container p{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+}

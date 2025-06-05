@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+body.html,#root{
+  height: 100%;
+  margin: 0;
+}
+.wrapper{
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+.wrapper > *:last-child{
+  margin-top: auto;
+}
