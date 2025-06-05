@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: event-app
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
