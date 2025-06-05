@@ -14,10 +14,11 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 
 # Initialize driver with headless options
-driver = webdriver.Chrome(
-    service=Service(ChromeDriverManager().install()),
-    options=chrome_options
-)
+from selenium.webdriver.chrome.service import Service
+
+chrome_service = Service(executable_path="/usr/bin/chromedriver")
+driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+
 
 def scrape_dynamic_website():
     url = "https://www.sydney.com/events"
